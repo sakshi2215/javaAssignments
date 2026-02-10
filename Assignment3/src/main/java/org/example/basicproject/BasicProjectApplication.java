@@ -1,0 +1,15 @@
+package org.example.basicproject;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BasicProjectApplication {
+
+    public static void main(String[] args) {
+
+        SpringApplication.run(BasicProjectApplication.class, args);
+        // Note - RUN http://localhost:8080/users or http://localhost:8080/hello-world
+    }
+
+}
