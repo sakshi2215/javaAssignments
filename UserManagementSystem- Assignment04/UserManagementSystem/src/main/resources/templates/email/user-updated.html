@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Account Updated</title>
+</head>
+<body>
+
+<p>Hello <span class="highlight" th:text="${user.firstName}">User</span>,</p>
+
+<p>Your account information has been <b>updated</b>.</p>
+
+<h4>Updated Details</h4>
+<ul>
+  <li th:each="change : ${changes}">
+    <b th:text="${change.field}"></b>:
+    <span th:text="${change.oldValue}"></span>
+    →
+    <span th:text="${change.newValue}"></span>
+  </li>
+</ul>
+
+<p>
+  <b>Updated On:</b>
+  <span th:text="${updatedAt}"></span>
+</p>
+
+<p>
+  If you did not request this change, please contact HR immediately.
+</p>
+
+<hr>
+<p>© 2026 TechCorp. All rights reserved.</p>
+
+</body>
+</html>

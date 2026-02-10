@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Account Deactivated</title>
+</head>
+<body>
+
+<p>Hello <span class="highlight" th:text="${user.firstName}">User</span>,</p>
+
+<p>
+  Your TechCorp account has been <b>deactivated</b>.
+</p>
+
+<h4>Details</h4>
+<ul>
+  <li><b>Name:</b> <span th:text="${user.firstName + ' ' + user.lastName}"></span></li>
+  <li><b>Email:</b> <span th:text="${user.email}"></span></li>
+  <li><b>Department:</b> <span th:text="${user.department}"></span></li>
+</ul>
+
+<p>
+  <b>Reason:</b>
+  <span th:text="${reason}">Administrative decision</span>
+</p>
+
+<p>
+  For further clarification, please contact the HR department.
+</p>
+
+<hr>
+<p>© 2026 TechCorp. All rights reserved.</p>
+
+</body>
+</html>

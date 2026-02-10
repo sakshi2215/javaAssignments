@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${subject}">Welcome Email</title>
+</head>
+<body>
+<h1>Welcome to TechCorp!</h1>
+
+<h2>Hello [[${user.firstName}]] [[${user.lastName}]]!</h2>
+
+<p>Your account has been created successfully.</p>
+
+<p>Login instructions:</p>
+<ul>
+    <li>Email: [[${user.email}]]</li>
+    <li>Role: [[${user.role}]]</li>
+    <li>Department: [[${user.department}]]</li>
+</ul>
+
+<p>If you have any questions, contact HR.</p>
+
+<hr>
+<p>© 2026 TechCorp. All rights reserved.</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${subject}">Email Subject</title>
+</head>
+<body>
+<div th:fragment="body">
+    <!-- placeholder for child content -->
+    <div th:insert="~{::body}"></div>
+</div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${subject}">Email Subject</title>
+</head>
+<body>
+<!-- This is the fragment that child templates will replace -->
+<div th:fragment="body">
+    <!-- Child template's <body> content will be inserted here -->
+    <div th:insert="~{::body}"></div>
+</div>
+</body>
+</html>
